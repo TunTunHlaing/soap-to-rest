@@ -66,54 +66,35 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-
             </plugin>
 
-
-                    <plugin>
-                        <groupId>org.apache.cxf</groupId>
-                        <artifactId>cxf-codegen-plugin</artifactId>
-                        <version>4.0.3</version> <!-- Use the latest version available -->
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>wsdl2java</goal>
-                                </goals>
-                                <phase>generate-sources</phase>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>https://www.dataaccess.com/webservicesserver/numberconversion.wso?wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>com.example.generated</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-                            </wsdlOptions>
-                        </configuration>
-                    </plugin>
-
-          <!--  <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxws-maven-plugin</artifactId>
-                <version>2.6</version>
+           <!--
+            Generate POJO classes from wsdl
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>4.0.3</version>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>wsimport</goal>
+                            <goal>wsdl2java</goal>
                         </goals>
-                        <configuration>
-                            <wsdlFiles>
-                                <wsdlFile>${project.basedir}/src/main/resources/wsdl/country.wsdl</wsdlFile>
-                            </wsdlFiles>
-
-                            <sourceDestDir>${project.basedir}/src/main/java/com/restsoap/soapcall</sourceDestDir>
-                        </configuration>
+                        <phase>generate-sources</phase>
                     </execution>
                 </executions>
-        </plugin>-->
+                <configuration>
+                    <wsdlOptions>
+                        <wsdlOption>
+                            <wsdl>http://www.dneonline.com/calculator.asmx?wsdl</wsdl>
+                            <extraargs>
+                                <extraarg>-p</extraarg>
+                                <extraarg>com.restsoap.soapcall.com.dataaccess.generated</extraarg>
+                            </extraargs>
+                        </wsdlOption>
+                    </wsdlOptions>
+                </configuration>
+            </plugin>  -->
+
         </plugins>
     </build>
 

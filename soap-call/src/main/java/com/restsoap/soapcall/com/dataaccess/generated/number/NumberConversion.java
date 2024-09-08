@@ -1,4 +1,4 @@
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
 import java.net.MalformedURLException;
 import java.net.URL;

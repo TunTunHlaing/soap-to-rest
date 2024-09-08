@@ -1,6 +1,7 @@
 package com.restsoap.soapcall.config;
 
-import com.restsoap.soapcall.service.SoapRestClient;
+import com.restsoap.soapcall.service.CalculatorClient;
+import com.restsoap.soapcall.service.NumberClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,15 +9,29 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SoapConfig {
 
-    @Value("${soap.default.uri}")
-    private String DEFAULT_URI;
-    @Value("${soap.scan.package}")
-    private String PACKAGE_SCAN;
+    @Value("${soap.number.default.uri}")
+    private String NUMBER_DEFAULT_URI;
+
+    @Value("${soap.number.scan.package}")
+    private String NUMBER_PACKAGE_SCAN;
+
+    @Value("${soap.calculator.default.uri}")
+    private String CALCULATOR_DEFAULT_URI;
+
+    @Value("${soap.calculator.scan.package}")
+    private String CALCULATOR_PACKAGE_SCAN;
 
     @Bean
-    public SoapRestClient soapRestClient() {
-        var soapRestClient = new SoapRestClient(DEFAULT_URI, PACKAGE_SCAN);
-        soapRestClient.setDefaultUri(DEFAULT_URI);
-        return soapRestClient;
+    public CalculatorClient calculatorClient() {
+        CalculatorClient calculatorClient = new CalculatorClient(CALCULATOR_PACKAGE_SCAN);
+        calculatorClient.setDefaultUri(CALCULATOR_DEFAULT_URI);
+        return calculatorClient;
+    }
+
+    @Bean
+    public NumberClient numberClient() {
+        NumberClient numberClient = new NumberClient(NUMBER_PACKAGE_SCAN);
+        numberClient.setDefaultUri(NUMBER_DEFAULT_URI);
+        return numberClient;
     }
 }

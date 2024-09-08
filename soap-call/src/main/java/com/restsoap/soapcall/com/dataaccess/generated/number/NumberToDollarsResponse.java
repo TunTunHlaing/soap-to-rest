@@ -1,7 +1,6 @@
 
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
-import java.math.BigDecimal;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -19,7 +18,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="dNum" type="{http://www.w3.org/2001/XMLSchema}decimal"/&gt;
+ *         &lt;element name="NumberToDollarsResult" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -30,36 +29,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "dNum"
+    "numberToDollarsResult"
 })
-@XmlRootElement(name = "NumberToDollars")
-public class NumberToDollars {
+@XmlRootElement(name = "NumberToDollarsResponse")
+public class NumberToDollarsResponse {
 
-    @XmlElement(required = true)
-    protected BigDecimal dNum;
+    @XmlElement(name = "NumberToDollarsResult", required = true)
+    protected String numberToDollarsResult;
 
     /**
-     * Gets the value of the dNum property.
+     * Gets the value of the numberToDollarsResult property.
      * 
      * @return
      *     possible object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public BigDecimal getDNum() {
-        return dNum;
+    public String getNumberToDollarsResult() {
+        return numberToDollarsResult;
     }
 
     /**
-     * Sets the value of the dNum property.
+     * Sets the value of the numberToDollarsResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link BigDecimal }
+     *     {@link String }
      *     
      */
-    public void setDNum(BigDecimal value) {
-        this.dNum = value;
+    public void setNumberToDollarsResult(String value) {
+        this.numberToDollarsResult = value;
     }
 
 }

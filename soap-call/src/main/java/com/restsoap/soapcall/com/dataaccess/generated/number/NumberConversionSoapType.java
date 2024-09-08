@@ -1,4 +1,4 @@
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;

@@ -1,6 +1,7 @@
 
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
+import java.math.BigDecimal;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -18,7 +19,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="NumberToDollarsResult" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="dNum" type="{http://www.w3.org/2001/XMLSchema}decimal"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,36 +30,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "numberToDollarsResult"
+    "dNum"
 })
-@XmlRootElement(name = "NumberToDollarsResponse")
-public class NumberToDollarsResponse {
+@XmlRootElement(name = "NumberToDollars")
+public class NumberToDollars {
 
-    @XmlElement(name = "NumberToDollarsResult", required = true)
-    protected String numberToDollarsResult;
+    @XmlElement(required = true)
+    protected BigDecimal dNum;
 
     /**
-     * Gets the value of the numberToDollarsResult property.
+     * Gets the value of the dNum property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    public String getNumberToDollarsResult() {
-        return numberToDollarsResult;
+    public BigDecimal getDNum() {
+        return dNum;
     }
 
     /**
-     * Sets the value of the numberToDollarsResult property.
+     * Sets the value of the dNum property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigDecimal }
      *     
      */
-    public void setNumberToDollarsResult(String value) {
-        this.numberToDollarsResult = value;
+    public void setDNum(BigDecimal value) {
+        this.dNum = value;
     }
 
 }

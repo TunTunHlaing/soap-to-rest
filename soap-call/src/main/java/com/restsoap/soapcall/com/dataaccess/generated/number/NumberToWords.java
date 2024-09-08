@@ -1,11 +1,14 @@
 
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
+import java.math.BigInteger;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+
 
 
 /**
@@ -18,7 +21,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="NumberToWordsResult" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="ubiNum" type="{http://www.w3.org/2001/XMLSchema}unsignedLong"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -27,38 +30,40 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  * 
  */
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "numberToWordsResult"
+    "ubiNum"
 })
-@XmlRootElement(name = "NumberToWordsResponse")
-public class NumberToWordsResponse {
+@XmlRootElement(name = "NumberToWords")
+public class NumberToWords {
 
-    @XmlElement(name = "NumberToWordsResult", required = true)
-    protected String numberToWordsResult;
+    @XmlElement(required = true)
+    @XmlSchemaType(name = "unsignedLong")
+    protected BigInteger ubiNum;
 
     /**
-     * Gets the value of the numberToWordsResult property.
+     * Gets the value of the ubiNum property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    public String getNumberToWordsResult() {
-        return numberToWordsResult;
+    public BigInteger getUbiNum() {
+        return ubiNum;
     }
 
     /**
-     * Sets the value of the numberToWordsResult property.
+     * Sets the value of the ubiNum property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link BigInteger }
      *     
      */
-    public void setNumberToWordsResult(String value) {
-        this.numberToWordsResult = value;
+    public void setUbiNum(BigInteger value) {
+        this.ubiNum = value;
     }
 
 }

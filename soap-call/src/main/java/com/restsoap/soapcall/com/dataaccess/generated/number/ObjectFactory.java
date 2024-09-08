@@ -1,5 +1,5 @@
 
-package com.restsoap.soapcall.com.dataaccess.generated;
+package com.restsoap.soapcall.com.dataaccess.generated.number;
 
 import jakarta.xml.bind.annotation.XmlRegistry;
 
